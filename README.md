@@ -1,5 +1,5 @@
 # Advanced Operating Systems
-Advanced operating systems projects from COMP6370 at Auburn University
+Advanced operating systems projects from COMP6370 at Auburn University. All projects completed within a Docker Image presenting the VM. 
 
 Project 1 - created function for array of 10 numbers, calculate avg of sq. roots, and prints
 
