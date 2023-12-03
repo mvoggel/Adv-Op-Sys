@@ -1,0 +1,2 @@
+This is a text file that contains a number of words that we will test to see the length.
+My name is Matthew Voggel and I am learning about C programming.

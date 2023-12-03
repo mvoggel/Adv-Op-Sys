@@ -1,0 +1,87 @@
+USER_ID: 0, GROUP_ID: 0
+bash-5.1# gcc -v
+Using built-in specs.
+COLLECT_GCC=gcc
+COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/11/lto-wrapper
+OFFLOAD_TARGET_NAMES=nvptx-none
+OFFLOAD_TARGET_DEFAULT=1
+Target: x86_64-redhat-linux
+Configured with: ../configure --enable-bootstrap --enable-host-pie --enable-host-bind-now --enable-languages=c,c++,fortran,lto --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=https://bugs.rockylinux.org/ --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --with-linker-hash-style=gnu --enable-plugin --enable-initfini-array --without-isl --enable-offload-targets=nvptx-none --without-cuda-driver --enable-gnu-indirect-function --enable-cet --with-tune=generic --with-arch_64=x86-64-v2 --with-arch_32=x86-64 --build=x86_64-redhat-linux --with-build-config=bootstrap-lto --enable-link-serialization=1
+Thread model: posix
+Supported LTO compression algorithms: zlib zstd
+gcc version 11.3.1 20220421 (Red Hat 11.3.1-2) (GCC) 
+bash-5.1# gcc -g -lm -o simple simple.c
+bash-5.1# man ldd
+bash: man: command not found
+bash-5.1# ldd simple
+	linux-vdso.so.1 (0x00007fff46781000)
+	libm.so.6 => /lib64/libm.so.6 (0x00007f1f78820000)
+	libc.so.6 => /lib64/libc.so.6 (0x00007f1f78617000)
+	/lib64/ld-linux-x86-64.so.2 (0x00007f1f78904000)
+bash-5.1# file simple
+simple: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=91222588a6dad8b0204d9231337d1af8f73c54ce, for GNU/Linux 3.2.0, with debug_info, not stripped
+bash-5.1# break main
+bash: break: only meaningful in a `for', `while', or `until' loop
+bash-5.1# break sqrt
+bash: break: only meaningful in a `for', `while', or `until' loop
+bash-5.1# info registers
+bash: info: command not found
+bash-5.1# gdb
+GNU gdb (GDB) Red Hat Enterprise Linux 10.2-10.el9
+Copyright (C) 2021 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-redhat-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<https://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word".
+(gdb) r
+Starting program:  
+warning: Error disabling address space randomization: Operation not permitted
+No executable file specified.
+Use the "file" or "exec-file" command.
+(gdb) file simple
+Reading symbols from simple...
+(gdb) break main
+Breakpoint 1 at 0x40115e: file simple.c, line 7.
+(gdb) break sqrt
+Breakpoint 2 at 0x401060
+(gdb) info registers
+The program has no registers now.
+(gdb) r
+Starting program: /headless/simple 
+warning: Error disabling address space randomization: Operation not permitted
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib64/libthread_db.so.1".
+
+Breakpoint 1, main () at simple.c:7
+7	  int numArray[10], size = 10;
+Missing separate debuginfos, use: dnf debuginfo-install glibc-2.34-40.el9.x86_64
+(gdb) n
+8	  double sum=0.0,avg;
+(gdb) s
+9	  printf("\nEnter 10 array elements for calculations:");
+(gdb) c
+Continuing.
+
+Enter 10 array elements for calculations:12
+31
+5
+97
+45
+12
+9
+65
+48
+22
+
+
+Breakpoint 2, 0x00007ff73f38d610 in sqrtf64 () from /lib64/libm.so.6
+(gdb) 

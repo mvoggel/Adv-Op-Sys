@@ -1,0 +1,592 @@
+sh-5.1# script
+Script started, output log file is 'typescript'.
+sh-5.1# yum -y install gcc
+Extra Packages for Enterprise Linux 9 - x86_64                                                               6.4 MB/s |  13 MB     00:02    
+Rocky Linux 9 - BaseOS                                                                                       1.5 MB/s | 1.7 MB     00:01    
+Rocky Linux 9 - AppStream                                                                                    2.1 MB/s | 6.4 MB     00:03    
+Rocky Linux 9 - Extras                                                                                       9.4 kB/s | 8.5 kB     00:00    
+Dependencies resolved.
+=============================================================================================================================================
+ Package                                 Architecture            Version                                    Repository                  Size
+=============================================================================================================================================
+Installing:
+ gcc                                     x86_64                  11.3.1-2.1.el9                             appstream                   32 M
+Upgrading:
+ cpp                                     x86_64                  11.3.1-2.1.el9                             appstream                   11 M
+ glibc                                   x86_64                  2.34-40.el9                                baseos                     1.9 M
+ glibc-common                            x86_64                  2.34-40.el9                                baseos                     300 k
+ glibc-langpack-en                       x86_64                  2.34-40.el9                                baseos                     558 k
+ glibc-minimal-langpack                  x86_64                  2.34-40.el9                                baseos                      28 k
+ libgcc                                  x86_64                  11.3.1-2.1.el9                             baseos                     115 k
+ libgomp                                 x86_64                  11.3.1-2.1.el9                             baseos                     290 k
+Installing dependencies:
+ glibc-devel                             x86_64                  2.34-40.el9                                appstream                   41 k
+ glibc-headers                           x86_64                  2.34-40.el9                                appstream                  440 k
+ kernel-headers                          x86_64                  5.14.0-162.6.1.el9_1.0.1                   appstream                  3.2 M
+ libxcrypt-devel                         x86_64                  4.4.18-3.el9                               appstream                   28 k
+
+Transaction Summary
+=============================================================================================================================================
+Install  5 Packages
+Upgrade  7 Packages
+
+Total download size: 50 M
+Downloading Packages:
+Rocky Linux 9 - BaseOS                             204% [====================================================================================(1/12): libxcrypt-devel-4.4.18-3.el9.x86_64.rpm                                                               56 kB/s |  28 kB     00:00    
+(2/12): glibc-headers-2.34-40.el9.x86_64.rpm                                                                 2.4 MB/s | 440 kB     00:00    
+(3/12): glibc-devel-2.34-40.el9.x86_64.rpm                                                                   850 kB/s |  41 kB     00:00    
+(4/12): kernel-headers-5.14.0-162.6.1.el9_1.0.1.x86_64.rpm                                                   2.6 MB/s | 3.2 MB     00:01    
+(5/12): libgomp-11.3.1-2.1.el9.x86_64.rpm                                                                    280 kB/s | 290 kB     00:01    
+(6/12): libgcc-11.3.1-2.1.el9.x86_64.rpm                                                                     188 kB/s | 115 kB     00:00    
+(7/12): glibc-minimal-langpack-2.34-40.el9.x86_64.rpm                                                        228 kB/s |  28 kB     00:00    
+(8/12): glibc-common-2.34-40.el9.x86_64.rpm                                                                  1.6 MB/s | 300 kB     00:00    
+(9/12): glibc-langpack-en-2.34-40.el9.x86_64.rpm                                                             1.8 MB/s | 558 kB     00:00    
+(10/12): glibc-2.34-40.el9.x86_64.rpm                                                                        3.0 MB/s | 1.9 MB     00:00    
+(11/12): cpp-11.3.1-2.1.el9.x86_64.rpm                                                                       4.5 MB/s |  11 MB     00:02    
+(12/12): gcc-11.3.1-2.1.el9.x86_64.rpm                                                                       5.9 MB/s |  32 MB     00:05    
+---------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                        8.5 MB/s |  50 MB     00:05     
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                                                                                     1/1 
+  Upgrading        : libgcc-11.3.1-2.1.el9.x86_64                                                                                       1/19 
+  Running scriptlet: libgcc-11.3.1-2.1.el9.x86_64                                                                                       1/19 
+  Upgrading        : glibc-minimal-langpack-2.34-40.el9.x86_64                                                                          2/19 
+  Upgrading        : glibc-langpack-en-2.34-40.el9.x86_64                                                                               3/19 
+  Upgrading        : glibc-common-2.34-40.el9.x86_64                                                                                    4/19 
+  Running scriptlet: glibc-2.34-40.el9.x86_64                                                                                           5/19 
+  Upgrading        : glibc-2.34-40.el9.x86_64                                                                                           5/19 
+  Running scriptlet: glibc-2.34-40.el9.x86_64                                                                                           5/19 
+  Installing       : glibc-headers-2.34-40.el9.x86_64                                                                                   6/19 
+  Upgrading        : libgomp-11.3.1-2.1.el9.x86_64                                                                                      7/19 
+  Upgrading        : cpp-11.3.1-2.1.el9.x86_64                                                                                          8/19 
+  Installing       : kernel-headers-5.14.0-162.6.1.el9_1.0.1.x86_64                                                                     9/19 
+  Installing       : glibc-devel-2.34-40.el9.x86_64                                                                                    10/19 
+  Installing       : libxcrypt-devel-4.4.18-3.el9.x86_64                                                                               11/19 
+  Installing       : gcc-11.3.1-2.1.el9.x86_64                                                                                         12/19 
+  Cleanup          : cpp-11.2.1-9.4.el9.x86_64                                                                                         13/19 
+  Cleanup          : libgomp-11.2.1-9.4.el9.x86_64                                                                                     14/19 
+  Cleanup          : glibc-langpack-en-2.34-28.el9_0.2.x86_64                                                                          15/19 
+  Cleanup          : glibc-common-2.34-28.el9_0.2.x86_64                                                                               16/19 
+  Cleanup          : glibc-minimal-langpack-2.34-28.el9_0.2.x86_64                                                                     17/19 
+  Cleanup          : glibc-2.34-28.el9_0.2.x86_64                                                                                      18/19 
+  Cleanup          : libgcc-11.2.1-9.4.el9.x86_64                                                                                      19/19 
+  Running scriptlet: libgcc-11.2.1-9.4.el9.x86_64                                                                                      19/19 
+  Verifying        : libxcrypt-devel-4.4.18-3.el9.x86_64                                                                                1/19 
+  Verifying        : kernel-headers-5.14.0-162.6.1.el9_1.0.1.x86_64                                                                     2/19 
+  Verifying        : gcc-11.3.1-2.1.el9.x86_64                                                                                          3/19 
+  Verifying        : glibc-headers-2.34-40.el9.x86_64                                                                                   4/19 
+  Verifying        : glibc-devel-2.34-40.el9.x86_64                                                                                     5/19 
+  Verifying        : libgomp-11.3.1-2.1.el9.x86_64                                                                                      6/19 
+  Verifying        : libgomp-11.2.1-9.4.el9.x86_64                                                                                      7/19 
+  Verifying        : libgcc-11.3.1-2.1.el9.x86_64                                                                                       8/19 
+  Verifying        : libgcc-11.2.1-9.4.el9.x86_64                                                                                       9/19 
+  Verifying        : glibc-minimal-langpack-2.34-40.el9.x86_64                                                                         10/19 
+  Verifying        : glibc-minimal-langpack-2.34-28.el9_0.2.x86_64                                                                     11/19 
+  Verifying        : glibc-langpack-en-2.34-40.el9.x86_64                                                                              12/19 
+  Verifying        : glibc-langpack-en-2.34-28.el9_0.2.x86_64                                                                          13/19 
+  Verifying        : glibc-common-2.34-40.el9.x86_64                                                                                   14/19 
+  Verifying        : glibc-common-2.34-28.el9_0.2.x86_64                                                                               15/19 
+  Verifying        : glibc-2.34-40.el9.x86_64                                                                                          16/19 
+  Verifying        : glibc-2.34-28.el9_0.2.x86_64                                                                                      17/19 
+  Verifying        : cpp-11.3.1-2.1.el9.x86_64                                                                                         18/19 
+  Verifying        : cpp-11.2.1-9.4.el9.x86_64                                                                                         19/19 
+
+Upgraded:
+  cpp-11.3.1-2.1.el9.x86_64                     glibc-2.34-40.el9.x86_64                           glibc-common-2.34-40.el9.x86_64         
+  glibc-langpack-en-2.34-40.el9.x86_64          glibc-minimal-langpack-2.34-40.el9.x86_64          libgcc-11.3.1-2.1.el9.x86_64            
+  libgomp-11.3.1-2.1.el9.x86_64                
+Installed:
+  gcc-11.3.1-2.1.el9.x86_64                              glibc-devel-2.34-40.el9.x86_64              glibc-headers-2.34-40.el9.x86_64        
+  kernel-headers-5.14.0-162.6.1.el9_1.0.1.x86_64         libxcrypt-devel-4.4.18-3.el9.x86_64        
+
+Complete!
+sh-5.1# yum -y install gcc-c++
+Last metadata expiration check: 0:00:49 ago on Tue 24 Jan 2023 01:15:47 AM UTC.
+Dependencies resolved.
+=============================================================================================================================================
+ Package                              Architecture                Version                               Repository                      Size
+=============================================================================================================================================
+Installing:
+ gcc-c++                              x86_64                      11.3.1-2.1.el9                        appstream                       13 M
+Upgrading:
+ libstdc++                            x86_64                      11.3.1-2.1.el9                        baseos                         756 k
+Installing dependencies:
+ libstdc++-devel                      x86_64                      11.3.1-2.1.el9                        appstream                      2.2 M
+
+Transaction Summary
+=============================================================================================================================================
+Install  2 Packages
+Upgrade  1 Package
+
+Total download size: 16 M
+Downloading Packages:
+(1/3): libstdc++-11.3.1-2.1.el9.x86_64.rpm                                                                   876 kB/s | 756 kB     00:00    
+(2/3): libstdc++-devel-11.3.1-2.1.el9.x86_64.rpm                                                             2.2 MB/s | 2.2 MB     00:01    
+(3/3): gcc-c++-11.3.1-2.1.el9.x86_64.rpm                                                                     5.8 MB/s |  13 MB     00:02    
+---------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                        5.9 MB/s |  16 MB     00:02     
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                                                                                     1/1 
+  Upgrading        : libstdc++-11.3.1-2.1.el9.x86_64                                                                                     1/4 
+  Installing       : libstdc++-devel-11.3.1-2.1.el9.x86_64                                                                               2/4 
+  Installing       : gcc-c++-11.3.1-2.1.el9.x86_64                                                                                       3/4 
+  Cleanup          : libstdc++-11.2.1-9.4.el9.x86_64                                                                                     4/4 
+  Running scriptlet: libstdc++-11.2.1-9.4.el9.x86_64                                                                                     4/4 
+  Verifying        : libstdc++-devel-11.3.1-2.1.el9.x86_64                                                                               1/4 
+  Verifying        : gcc-c++-11.3.1-2.1.el9.x86_64                                                                                       2/4 
+  Verifying        : libstdc++-11.3.1-2.1.el9.x86_64                                                                                     3/4 
+  Verifying        : libstdc++-11.2.1-9.4.el9.x86_64                                                                                     4/4 
+
+Upgraded:
+  libstdc++-11.3.1-2.1.el9.x86_64                                                                                                            
+Installed:
+  gcc-c++-11.3.1-2.1.el9.x86_64                                     libstdc++-devel-11.3.1-2.1.el9.x86_64                                    
+
+Complete!
+sh-5.1# yum -y install vim-enhanced
+Last metadata expiration check: 0:01:07 ago on Tue 24 Jan 2023 01:15:47 AM UTC.
+Package vim-enhanced-2:8.2.2637-16.el9_0.3.x86_64 is already installed.
+Dependencies resolved.
+Nothing to do.
+Complete!
+sh-5.1# yum -y install emacs
+Last metadata expiration check: 0:01:17 ago on Tue 24 Jan 2023 01:15:47 AM UTC.
+Dependencies resolved.
+=============================================================================================================================================
+ Package                                      Architecture            Version                               Repository                  Size
+=============================================================================================================================================
+Installing:
+ emacs                                        x86_64                  1:27.2-6.el9                          appstream                  3.3 M
+Upgrading:
+ harfbuzz                                     x86_64                  2.7.4-8.el9                           baseos                     624 k
+ webkit2gtk3-jsc                              x86_64                  2.36.7-1.el9_1.1                      appstream                  6.3 M
+Installing dependencies:
+ bubblewrap                                   x86_64                  0.4.1-6.el9                           baseos                      49 k
+ emacs-common                                 x86_64                  1:27.2-6.el9                          appstream                   35 M
+ enchant2                                     x86_64                  2.2.15-6.el9                          appstream                   63 k
+ giflib                                       x86_64                  5.2.1-9.el9                           appstream                   48 k
+ graphene                                     x86_64                  1.10.6-2.el9                          appstream                   64 k
+ gstreamer1-plugins-base                      x86_64                  1.18.4-5.el9                          appstream                  2.0 M
+ harfbuzz-icu                                 x86_64                  2.7.4-8.el9                           appstream                   14 k
+ hunspell                                     x86_64                  1.7.0-11.el9                          appstream                  322 k
+ hunspell-en-GB                               noarch                  0.20140811.1-20.el9                   appstream                  225 k
+ hunspell-en-US                               noarch                  0.20140811.1-20.el9                   appstream                  176 k
+ hunspell-filesystem                          x86_64                  1.7.0-11.el9                          appstream                  7.7 k
+ hyphen                                       x86_64                  2.8.8-17.el9                          appstream                   29 k
+ lame-libs                                    x86_64                  3.100-12.el9                          appstream                  332 k
+ libXaw                                       x86_64                  1.0.13-19.el9                         appstream                  197 k
+ libXpm                                       x86_64                  3.5.13-7.el9                          appstream                   58 k
+ libXv                                        x86_64                  1.0.11-16.el9                         appstream                   18 k
+ libdvdnav                                    x86_64                  6.1.0-4.el9                           appstream                   54 k
+ libdvdread                                   x86_64                  6.1.1-4.el9                           appstream                   73 k
+ libglvnd-egl                                 x86_64                  1:1.3.4-1.el9                         appstream                   36 k
+ libglvnd-opengl                              x86_64                  1:1.3.4-1.el9                         appstream                   42 k
+ libotf                                       x86_64                  0.9.13-20.el9                         appstream                  100 k
+ librsvg2                                     x86_64                  2.50.7-1.el9                          appstream                  3.3 M
+ libshout                                     x86_64                  2.4.3-7.el9                           appstream                   66 k
+ libsrtp                                      x86_64                  2.3.0-7.el9                           appstream                   57 k
+ libtheora                                    x86_64                  1:1.1.1-31.el9                        appstream                  163 k
+ libv4l                                       x86_64                  1.20.0-5.el9                          appstream                  198 k
+ libvisual                                    x86_64                  1:0.4.0-34.el9                        appstream                  143 k
+ libvpx                                       x86_64                  1.9.0-5.el9                           appstream                  1.0 M
+ libwpe                                       x86_64                  1.10.0-4.el9                          appstream                   26 k
+ m17n-db                                      noarch                  1.8.0-16.el9                          appstream                  579 k
+ m17n-lib                                     x86_64                  1.8.0-13.el9                          appstream                  194 k
+ mesa-libEGL                                  x86_64                  22.1.5-2.el9                          appstream                  121 k
+ mpg123-libs                                  x86_64                  1.26.2-5.el9                          appstream                  310 k
+ orc                                          x86_64                  0.4.31-6.el9                          appstream                  183 k
+ soundtouch                                   x86_64                  2.1.1-8.el9                           appstream                   73 k
+ speex                                        x86_64                  1.2.0-11.el9                          appstream                   67 k
+ taglib                                       x86_64                  1.12-6.el9                            appstream                  342 k
+ twolame-libs                                 x86_64                  0.3.13-19.el9                         appstream                   57 k
+ wavpack                                      x86_64                  5.4.0-5.el9                           appstream                  211 k
+ webkit2gtk3                                  x86_64                  2.36.7-1.el9_1.1                      appstream                   15 M
+ woff2                                        x86_64                  1.0.2-15.el9                          appstream                   61 k
+ wpebackend-fdo                               x86_64                  1.10.0-3.el9                          appstream                   44 k
+ xdg-dbus-proxy                               x86_64                  0.1.3-1.el9                           appstream                   41 k
+Installing weak dependencies:
+ geoclue2                                     x86_64                  2.5.7-5.el9                           appstream                  115 k
+ gstreamer1-plugins-bad-free                  x86_64                  1.18.4-5.el9                          appstream                  2.3 M
+ gstreamer1-plugins-good                      x86_64                  1.18.4-5.el9                          appstream                  2.0 M
+ hunspell-en                                  noarch                  0.20140811.1-20.el9                   appstream                  180 k
+
+Transaction Summary
+=============================================================================================================================================
+Install  48 Packages
+Upgrade   2 Packages
+
+Total download size: 76 M
+Downloading Packages:
+(1/50): hunspell-en-US-0.20140811.1-20.el9.noarch.rpm                                                        694 kB/s | 176 kB     00:00    
+(2/50): hunspell-en-GB-0.20140811.1-20.el9.noarch.rpm                                                        630 kB/s | 225 kB     00:00    
+(3/50): hunspell-en-0.20140811.1-20.el9.noarch.rpm                                                           1.6 MB/s | 180 kB     00:00    
+(4/50): giflib-5.2.1-9.el9.x86_64.rpm                                                                        504 kB/s |  48 kB     00:00    
+(5/50): hyphen-2.8.8-17.el9.x86_64.rpm                                                                       299 kB/s |  29 kB     00:00    
+(6/50): harfbuzz-icu-2.7.4-8.el9.x86_64.rpm                                                                  195 kB/s |  14 kB     00:00    
+(7/50): geoclue2-2.5.7-5.el9.x86_64.rpm                                                                      1.0 MB/s | 115 kB     00:00    
+(8/50): bubblewrap-0.4.1-6.el9.x86_64.rpm                                                                     86 kB/s |  49 kB     00:00    
+(9/50): graphene-1.10.6-2.el9.x86_64.rpm                                                                     893 kB/s |  64 kB     00:00    
+(10/50): hunspell-filesystem-1.7.0-11.el9.x86_64.rpm                                                         120 kB/s | 7.7 kB     00:00    
+(11/50): hunspell-1.7.0-11.el9.x86_64.rpm                                                                    1.8 MB/s | 322 kB     00:00    
+(12/50): enchant2-2.2.15-6.el9.x86_64.rpm                                                                    431 kB/s |  63 kB     00:00    
+(13/50): gstreamer1-plugins-base-1.18.4-5.el9.x86_64.rpm                                                     6.1 MB/s | 2.0 MB     00:00    
+(14/50): libXpm-3.5.13-7.el9.x86_64.rpm                                                                      502 kB/s |  58 kB     00:00    
+(15/50): m17n-lib-1.8.0-13.el9.x86_64.rpm                                                                    1.4 MB/s | 194 kB     00:00    
+(16/50): libvisual-0.4.0-34.el9.x86_64.rpm                                                                   1.1 MB/s | 143 kB     00:00    
+(17/50): libwpe-1.10.0-4.el9.x86_64.rpm                                                                      194 kB/s |  26 kB     00:00    
+(18/50): libotf-0.9.13-20.el9.x86_64.rpm                                                                     650 kB/s | 100 kB     00:00    
+(19/50): xdg-dbus-proxy-0.1.3-1.el9.x86_64.rpm                                                               423 kB/s |  41 kB     00:00    
+(20/50): orc-0.4.31-6.el9.x86_64.rpm                                                                         1.4 MB/s | 183 kB     00:00    
+(21/50): taglib-1.12-6.el9.x86_64.rpm                                                                        2.5 MB/s | 342 kB     00:00    
+(22/50): soundtouch-2.1.1-8.el9.x86_64.rpm                                                                   1.1 MB/s |  73 kB     00:00    
+(23/50): twolame-libs-0.3.13-19.el9.x86_64.rpm                                                               812 kB/s |  57 kB     00:00    
+(24/50): wpebackend-fdo-1.10.0-3.el9.x86_64.rpm                                                              805 kB/s |  44 kB     00:00    
+(25/50): speex-1.2.0-11.el9.x86_64.rpm                                                                       963 kB/s |  67 kB     00:00    
+(26/50): woff2-1.0.2-15.el9.x86_64.rpm                                                                       466 kB/s |  61 kB     00:00    
+(27/50): m17n-db-1.8.0-16.el9.noarch.rpm                                                                     3.0 MB/s | 579 kB     00:00    
+(28/50): libdvdread-6.1.1-4.el9.x86_64.rpm                                                                   470 kB/s |  73 kB     00:00    
+(29/50): libshout-2.4.3-7.el9.x86_64.rpm                                                                     976 kB/s |  66 kB     00:00    
+(30/50): mesa-libEGL-22.1.5-2.el9.x86_64.rpm                                                                 3.2 MB/s | 121 kB     00:00    
+(31/50): libsrtp-2.3.0-7.el9.x86_64.rpm                                                                      356 kB/s |  57 kB     00:00    
+(32/50): mpg123-libs-1.26.2-5.el9.x86_64.rpm                                                                 806 kB/s | 310 kB     00:00    
+(33/50): libXaw-1.0.13-19.el9.x86_64.rpm                                                                     480 kB/s | 197 kB     00:00    
+(34/50): libdvdnav-6.1.0-4.el9.x86_64.rpm                                                                    187 kB/s |  54 kB     00:00    
+(35/50): libglvnd-egl-1.3.4-1.el9.x86_64.rpm                                                                 1.0 MB/s |  36 kB     00:00    
+(36/50): libtheora-1.1.1-31.el9.x86_64.rpm                                                                   3.0 MB/s | 163 kB     00:00    
+(37/50): libglvnd-opengl-1.3.4-1.el9.x86_64.rpm                                                              564 kB/s |  42 kB     00:00    
+(38/50): libXv-1.0.11-16.el9.x86_64.rpm                                                                       92 kB/s |  18 kB     00:00    
+(39/50): libvpx-1.9.0-5.el9.x86_64.rpm                                                                       3.1 MB/s | 1.0 MB     00:00    
+(40/50): lame-libs-3.100-12.el9.x86_64.rpm                                                                   1.2 MB/s | 332 kB     00:00    
+(41/50): librsvg2-2.50.7-1.el9.x86_64.rpm                                                                    3.0 MB/s | 3.3 MB     00:01    
+(42/50): gstreamer1-plugins-good-1.18.4-5.el9.x86_64.rpm                                                     2.4 MB/s | 2.0 MB     00:00    
+(43/50): gstreamer1-plugins-bad-free-1.18.4-5.el9.x86_64.rpm                                                 2.9 MB/s | 2.3 MB     00:00    
+(44/50): emacs-27.2-6.el9.x86_64.rpm                                                                         1.4 MB/s | 3.3 MB     00:02    
+(45/50): libv4l-1.20.0-5.el9.x86_64.rpm                                                                      546 kB/s | 198 kB     00:00    
+(46/50): wavpack-5.4.0-5.el9.x86_64.rpm                                                                      620 kB/s | 211 kB     00:00    
+(47/50): harfbuzz-2.7.4-8.el9.x86_64.rpm                                                                     824 kB/s | 624 kB     00:00    
+(48/50): webkit2gtk3-jsc-2.36.7-1.el9_1.1.x86_64.rpm                                                         2.0 MB/s | 6.3 MB     00:03    
+(49/50): webkit2gtk3-2.36.7-1.el9_1.1.x86_64.rpm                                                             2.1 MB/s |  15 MB     00:07    
+(50/50): emacs-common-27.2-6.el9.x86_64.rpm                                                                  2.9 MB/s |  35 MB     00:12    
+---------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                        4.9 MB/s |  76 MB     00:15     
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                                                                                     1/1 
+  Upgrading        : harfbuzz-2.7.4-8.el9.x86_64                                                                                        1/52 
+  Installing       : orc-0.4.31-6.el9.x86_64                                                                                            2/52 
+  Installing       : librsvg2-2.50.7-1.el9.x86_64                                                                                       3/52 
+  Upgrading        : webkit2gtk3-jsc-2.36.7-1.el9_1.1.x86_64                                                                            4/52 
+  Installing       : libtheora-1:1.1.1-31.el9.x86_64                                                                                    5/52 
+  Installing       : libdvdread-6.1.1-4.el9.x86_64                                                                                      6/52 
+  Installing       : speex-1.2.0-11.el9.x86_64                                                                                          7/52 
+  Installing       : libwpe-1.10.0-4.el9.x86_64                                                                                         8/52 
+  Installing       : wpebackend-fdo-1.10.0-3.el9.x86_64                                                                                 9/52 
+  Installing       : libshout-2.4.3-7.el9.x86_64                                                                                       10/52 
+  Installing       : libdvdnav-6.1.0-4.el9.x86_64                                                                                      11/52 
+  Installing       : harfbuzz-icu-2.7.4-8.el9.x86_64                                                                                   12/52 
+  Installing       : libglvnd-egl-1:1.3.4-1.el9.x86_64                                                                                 13/52 
+  Installing       : mesa-libEGL-22.1.5-2.el9.x86_64                                                                                   14/52 
+  Installing       : wavpack-5.4.0-5.el9.x86_64                                                                                        15/52 
+  Installing       : libv4l-1.20.0-5.el9.x86_64                                                                                        16/52 
+  Installing       : emacs-common-1:27.2-6.el9.x86_64                                                                                  17/52 
+  Installing       : lame-libs-3.100-12.el9.x86_64                                                                                     18/52 
+  Installing       : libXv-1.0.11-16.el9.x86_64                                                                                        19/52 
+  Installing       : libvpx-1.9.0-5.el9.x86_64                                                                                         20/52 
+  Installing       : libglvnd-opengl-1:1.3.4-1.el9.x86_64                                                                              21/52 
+  Installing       : mpg123-libs-1.26.2-5.el9.x86_64                                                                                   22/52 
+  Installing       : libsrtp-2.3.0-7.el9.x86_64                                                                                        23/52 
+  Installing       : woff2-1.0.2-15.el9.x86_64                                                                                         24/52 
+  Installing       : m17n-db-1.8.0-16.el9.noarch                                                                                       25/52 
+  Installing       : m17n-lib-1.8.0-13.el9.x86_64                                                                                      26/52 
+  Installing       : twolame-libs-0.3.13-19.el9.x86_64                                                                                 27/52 
+  Installing       : soundtouch-2.1.1-8.el9.x86_64                                                                                     28/52 
+  Installing       : taglib-1.12-6.el9.x86_64                                                                                          29/52 
+  Installing       : xdg-dbus-proxy-0.1.3-1.el9.x86_64                                                                                 30/52 
+  Installing       : libvisual-1:0.4.0-34.el9.x86_64                                                                                   31/52 
+  Installing       : libXpm-3.5.13-7.el9.x86_64                                                                                        32/52 
+  Installing       : libXaw-1.0.13-19.el9.x86_64                                                                                       33/52 
+  Installing       : libotf-0.9.13-20.el9.x86_64                                                                                       34/52 
+  Installing       : hunspell-filesystem-1.7.0-11.el9.x86_64                                                                           35/52 
+  Installing       : hunspell-en-GB-0.20140811.1-20.el9.noarch                                                                         36/52 
+  Installing       : hunspell-en-0.20140811.1-20.el9.noarch                                                                            37/52 
+  Installing       : hunspell-1.7.0-11.el9.x86_64                                                                                      38/52 
+  Installing       : hunspell-en-US-0.20140811.1-20.el9.noarch                                                                         39/52 
+  Installing       : enchant2-2.2.15-6.el9.x86_64                                                                                      40/52 
+  Installing       : graphene-1.10.6-2.el9.x86_64                                                                                      41/52 
+  Installing       : gstreamer1-plugins-base-1.18.4-5.el9.x86_64                                                                       42/52 
+  Installing       : gstreamer1-plugins-good-1.18.4-5.el9.x86_64                                                                       43/52 
+  Installing       : gstreamer1-plugins-bad-free-1.18.4-5.el9.x86_64                                                                   44/52 
+  Running scriptlet: geoclue2-2.5.7-5.el9.x86_64                                                                                       45/52 
+  Installing       : geoclue2-2.5.7-5.el9.x86_64                                                                                       45/52 
+  Running scriptlet: geoclue2-2.5.7-5.el9.x86_64                                                                                       45/52 
+  Installing       : hyphen-2.8.8-17.el9.x86_64                                                                                        46/52 
+  Installing       : giflib-5.2.1-9.el9.x86_64                                                                                         47/52 
+  Installing       : bubblewrap-0.4.1-6.el9.x86_64                                                                                     48/52 
+  Installing       : webkit2gtk3-2.36.7-1.el9_1.1.x86_64                                                                               49/52 
+  Installing       : emacs-1:27.2-6.el9.x86_64                                                                                         50/52 
+  Cleanup          : webkit2gtk3-jsc-2.36.7-1.el9_0.x86_64                                                                             51/52 
+  Cleanup          : harfbuzz-2.7.4-5.el9.x86_64                                                                                       52/52 
+  Running scriptlet: emacs-common-1:27.2-6.el9.x86_64                                                                                  52/52 
+  Running scriptlet: emacs-1:27.2-6.el9.x86_64                                                                                         52/52 
+  Running scriptlet: harfbuzz-2.7.4-5.el9.x86_64                                                                                       52/52 
+  Verifying        : bubblewrap-0.4.1-6.el9.x86_64                                                                                      1/52 
+  Verifying        : hunspell-en-US-0.20140811.1-20.el9.noarch                                                                          2/52 
+  Verifying        : hunspell-en-GB-0.20140811.1-20.el9.noarch                                                                          3/52 
+  Verifying        : hunspell-en-0.20140811.1-20.el9.noarch                                                                             4/52 
+  Verifying        : giflib-5.2.1-9.el9.x86_64                                                                                          5/52 
+  Verifying        : hyphen-2.8.8-17.el9.x86_64                                                                                         6/52 
+  Verifying        : geoclue2-2.5.7-5.el9.x86_64                                                                                        7/52 
+  Verifying        : harfbuzz-icu-2.7.4-8.el9.x86_64                                                                                    8/52 
+  Verifying        : graphene-1.10.6-2.el9.x86_64                                                                                       9/52 
+  Verifying        : gstreamer1-plugins-base-1.18.4-5.el9.x86_64                                                                       10/52 
+  Verifying        : hunspell-filesystem-1.7.0-11.el9.x86_64                                                                           11/52 
+  Verifying        : hunspell-1.7.0-11.el9.x86_64                                                                                      12/52 
+  Verifying        : enchant2-2.2.15-6.el9.x86_64                                                                                      13/52 
+  Verifying        : m17n-lib-1.8.0-13.el9.x86_64                                                                                      14/52 
+  Verifying        : libXpm-3.5.13-7.el9.x86_64                                                                                        15/52 
+  Verifying        : libotf-0.9.13-20.el9.x86_64                                                                                       16/52 
+  Verifying        : libwpe-1.10.0-4.el9.x86_64                                                                                        17/52 
+  Verifying        : libvisual-1:0.4.0-34.el9.x86_64                                                                                   18/52 
+  Verifying        : orc-0.4.31-6.el9.x86_64                                                                                           19/52 
+  Verifying        : xdg-dbus-proxy-0.1.3-1.el9.x86_64                                                                                 20/52 
+  Verifying        : taglib-1.12-6.el9.x86_64                                                                                          21/52 
+  Verifying        : soundtouch-2.1.1-8.el9.x86_64                                                                                     22/52 
+  Verifying        : twolame-libs-0.3.13-19.el9.x86_64                                                                                 23/52 
+  Verifying        : wpebackend-fdo-1.10.0-3.el9.x86_64                                                                                24/52 
+  Verifying        : speex-1.2.0-11.el9.x86_64                                                                                         25/52 
+  Verifying        : m17n-db-1.8.0-16.el9.noarch                                                                                       26/52 
+  Verifying        : woff2-1.0.2-15.el9.x86_64                                                                                         27/52 
+  Verifying        : libdvdread-6.1.1-4.el9.x86_64                                                                                     28/52 
+  Verifying        : libshout-2.4.3-7.el9.x86_64                                                                                       29/52 
+  Verifying        : mesa-libEGL-22.1.5-2.el9.x86_64                                                                                   30/52 
+  Verifying        : libsrtp-2.3.0-7.el9.x86_64                                                                                        31/52 
+  Verifying        : mpg123-libs-1.26.2-5.el9.x86_64                                                                                   32/52 
+  Verifying        : libXaw-1.0.13-19.el9.x86_64                                                                                       33/52 
+  Verifying        : libdvdnav-6.1.0-4.el9.x86_64                                                                                      34/52 
+  Verifying        : libglvnd-opengl-1:1.3.4-1.el9.x86_64                                                                              35/52 
+  Verifying        : libglvnd-egl-1:1.3.4-1.el9.x86_64                                                                                 36/52 
+  Verifying        : libtheora-1:1.1.1-31.el9.x86_64                                                                                   37/52 
+  Verifying        : librsvg2-2.50.7-1.el9.x86_64                                                                                      38/52 
+  Verifying        : libvpx-1.9.0-5.el9.x86_64                                                                                         39/52 
+  Verifying        : libXv-1.0.11-16.el9.x86_64                                                                                        40/52 
+  Verifying        : lame-libs-3.100-12.el9.x86_64                                                                                     41/52 
+  Verifying        : gstreamer1-plugins-good-1.18.4-5.el9.x86_64                                                                       42/52 
+  Verifying        : gstreamer1-plugins-bad-free-1.18.4-5.el9.x86_64                                                                   43/52 
+  Verifying        : emacs-common-1:27.2-6.el9.x86_64                                                                                  44/52 
+  Verifying        : emacs-1:27.2-6.el9.x86_64                                                                                         45/52 
+  Verifying        : webkit2gtk3-2.36.7-1.el9_1.1.x86_64                                                                               46/52 
+  Verifying        : libv4l-1.20.0-5.el9.x86_64                                                                                        47/52 
+  Verifying        : wavpack-5.4.0-5.el9.x86_64                                                                                        48/52 
+  Verifying        : harfbuzz-2.7.4-8.el9.x86_64                                                                                       49/52 
+  Verifying        : harfbuzz-2.7.4-5.el9.x86_64                                                                                       50/52 
+  Verifying        : webkit2gtk3-jsc-2.36.7-1.el9_1.1.x86_64                                                                           51/52 
+  Verifying        : webkit2gtk3-jsc-2.36.7-1.el9_0.x86_64                                                                             52/52 
+
+Upgraded:
+  harfbuzz-2.7.4-8.el9.x86_64                                     webkit2gtk3-jsc-2.36.7-1.el9_1.1.x86_64                                    
+Installed:
+  bubblewrap-0.4.1-6.el9.x86_64                emacs-1:27.2-6.el9.x86_64                        emacs-common-1:27.2-6.el9.x86_64            
+  enchant2-2.2.15-6.el9.x86_64                 geoclue2-2.5.7-5.el9.x86_64                      giflib-5.2.1-9.el9.x86_64                   
+  graphene-1.10.6-2.el9.x86_64                 gstreamer1-plugins-bad-free-1.18.4-5.el9.x86_64  gstreamer1-plugins-base-1.18.4-5.el9.x86_64 
+  gstreamer1-plugins-good-1.18.4-5.el9.x86_64  harfbuzz-icu-2.7.4-8.el9.x86_64                  hunspell-1.7.0-11.el9.x86_64                
+  hunspell-en-0.20140811.1-20.el9.noarch       hunspell-en-GB-0.20140811.1-20.el9.noarch        hunspell-en-US-0.20140811.1-20.el9.noarch   
+  hunspell-filesystem-1.7.0-11.el9.x86_64      hyphen-2.8.8-17.el9.x86_64                       lame-libs-3.100-12.el9.x86_64               
+  libXaw-1.0.13-19.el9.x86_64                  libXpm-3.5.13-7.el9.x86_64                       libXv-1.0.11-16.el9.x86_64                  
+  libdvdnav-6.1.0-4.el9.x86_64                 libdvdread-6.1.1-4.el9.x86_64                    libglvnd-egl-1:1.3.4-1.el9.x86_64           
+  libglvnd-opengl-1:1.3.4-1.el9.x86_64         libotf-0.9.13-20.el9.x86_64                      librsvg2-2.50.7-1.el9.x86_64                
+  libshout-2.4.3-7.el9.x86_64                  libsrtp-2.3.0-7.el9.x86_64                       libtheora-1:1.1.1-31.el9.x86_64             
+  libv4l-1.20.0-5.el9.x86_64                   libvisual-1:0.4.0-34.el9.x86_64                  libvpx-1.9.0-5.el9.x86_64                   
+  libwpe-1.10.0-4.el9.x86_64                   m17n-db-1.8.0-16.el9.noarch                      m17n-lib-1.8.0-13.el9.x86_64                
+  mesa-libEGL-22.1.5-2.el9.x86_64              mpg123-libs-1.26.2-5.el9.x86_64                  orc-0.4.31-6.el9.x86_64                     
+  soundtouch-2.1.1-8.el9.x86_64                speex-1.2.0-11.el9.x86_64                        taglib-1.12-6.el9.x86_64                    
+  twolame-libs-0.3.13-19.el9.x86_64            wavpack-5.4.0-5.el9.x86_64                       webkit2gtk3-2.36.7-1.el9_1.1.x86_64         
+  woff2-1.0.2-15.el9.x86_64                    wpebackend-fdo-1.10.0-3.el9.x86_64               xdg-dbus-proxy-0.1.3-1.el9.x86_64           
+
+Complete!
+sh-5.1# yum -y install gdb
+Last metadata expiration check: 0:02:03 ago on Tue 24 Jan 2023 01:15:47 AM UTC.
+Dependencies resolved.
+=============================================================================================================================================
+ Package                               Architecture                Version                              Repository                      Size
+=============================================================================================================================================
+Installing:
+ gdb                                   x86_64                      10.2-10.el9                          appstream                      125 k
+Installing dependencies:
+ boost-regex                           x86_64                      1.75.0-8.el9                         appstream                      277 k
+ gdb-headless                          x86_64                      10.2-10.el9                          appstream                      3.9 M
+ libbabeltrace                         x86_64                      1.5.8-10.el9                         appstream                      186 k
+ libipt                                x86_64                      2.0.4-5.el9                          appstream                       55 k
+ source-highlight                      x86_64                      3.1.9-11.el9                         appstream                      609 k
+
+Transaction Summary
+=============================================================================================================================================
+Install  6 Packages
+
+Total download size: 5.1 M
+Installed size: 17 M
+Downloading Packages:
+(1/6): libipt-2.0.4-5.el9.x86_64.rpm                                                                         229 kB/s |  55 kB     00:00    
+(2/6): libbabeltrace-1.5.8-10.el9.x86_64.rpm                                                                 662 kB/s | 186 kB     00:00    
+(3/6): source-highlight-3.1.9-11.el9.x86_64.rpm                                                              1.7 MB/s | 609 kB     00:00    
+(4/6): boost-regex-1.75.0-8.el9.x86_64.rpm                                                                   1.9 MB/s | 277 kB     00:00    
+(5/6): gdb-10.2-10.el9.x86_64.rpm                                                                            1.8 MB/s | 125 kB     00:00    
+(6/6): gdb-headless-10.2-10.el9.x86_64.rpm                                                                   7.8 MB/s | 3.9 MB     00:00    
+---------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                        5.0 MB/s | 5.1 MB     00:01     
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                                                                                     1/1 
+  Installing       : boost-regex-1.75.0-8.el9.x86_64                                                                                     1/6 
+  Installing       : source-highlight-3.1.9-11.el9.x86_64                                                                                2/6 
+  Installing       : libipt-2.0.4-5.el9.x86_64                                                                                           3/6 
+  Installing       : libbabeltrace-1.5.8-10.el9.x86_64                                                                                   4/6 
+  Installing       : gdb-headless-10.2-10.el9.x86_64                                                                                     5/6 
+  Installing       : gdb-10.2-10.el9.x86_64                                                                                              6/6 
+  Running scriptlet: gdb-10.2-10.el9.x86_64                                                                                              6/6 
+  Verifying        : libbabeltrace-1.5.8-10.el9.x86_64                                                                                   1/6 
+  Verifying        : libipt-2.0.4-5.el9.x86_64                                                                                           2/6 
+  Verifying        : source-highlight-3.1.9-11.el9.x86_64                                                                                3/6 
+  Verifying        : boost-regex-1.75.0-8.el9.x86_64                                                                                     4/6 
+  Verifying        : gdb-headless-10.2-10.el9.x86_64                                                                                     5/6 
+  Verifying        : gdb-10.2-10.el9.x86_64                                                                                              6/6 
+
+Installed:
+  boost-regex-1.75.0-8.el9.x86_64  gdb-10.2-10.el9.x86_64                gdb-headless-10.2-10.el9.x86_64  libbabeltrace-1.5.8-10.el9.x86_64 
+  libipt-2.0.4-5.el9.x86_64        source-highlight-3.1.9-11.el9.x86_64 
+
+Complete!
+sh-5.1# yum -y install ethtool
+Last metadata expiration check: 0:02:14 ago on Tue 24 Jan 2023 01:15:47 AM UTC.
+Dependencies resolved.
+=============================================================================================================================================
+ Package                         Architecture                   Version                                 Repository                      Size
+=============================================================================================================================================
+Installing:
+ ethtool                         x86_64                         2:5.16-1.el9                            baseos                         219 k
+Installing dependencies:
+ libmnl                          x86_64                         1.0.4-15.el9                            baseos                          28 k
+
+Transaction Summary
+=============================================================================================================================================
+Install  2 Packages
+
+Total download size: 246 k
+Installed size: 707 k
+Downloading Packages:
+(1/2): libmnl-1.0.4-15.el9.x86_64.rpm                                                                         29 kB/s |  28 kB     00:00    
+(2/2): ethtool-5.16-1.el9.x86_64.rpm                                                                         198 kB/s | 219 kB     00:01    
+---------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                        177 kB/s | 246 kB     00:01     
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                                                                                     1/1 
+  Installing       : libmnl-1.0.4-15.el9.x86_64                                                                                          1/2 
+  Installing       : ethtool-2:5.16-1.el9.x86_64                                                                                         2/2 
+  Running scriptlet: ethtool-2:5.16-1.el9.x86_64                                                                                         2/2 
+  Verifying        : libmnl-1.0.4-15.el9.x86_64                                                                                          1/2 
+  Verifying        : ethtool-2:5.16-1.el9.x86_64                                                                                         2/2 
+
+Installed:
+  ethtool-2:5.16-1.el9.x86_64                                           libmnl-1.0.4-15.el9.x86_64                                          
+
+Complete!
+sh-5.1# yum -y install pciutils
+Last metadata expiration check: 0:02:31 ago on Tue 24 Jan 2023 01:15:47 AM UTC.
+Dependencies resolved.
+=============================================================================================================================================
+ Package                              Architecture                  Version                              Repository                     Size
+=============================================================================================================================================
+Installing:
+ pciutils                             x86_64                        3.7.0-5.el9                          baseos                         92 k
+Installing dependencies:
+ pciutils-libs                        x86_64                        3.7.0-5.el9                          baseos                         41 k
+
+Transaction Summary
+=============================================================================================================================================
+Install  2 Packages
+
+Total download size: 133 k
+Installed size: 292 k
+Downloading Packages:
+(1/2): pciutils-libs-3.7.0-5.el9.x86_64.rpm                                                                   74 kB/s |  41 kB     00:00    
+(2/2): pciutils-3.7.0-5.el9.x86_64.rpm                                                                       160 kB/s |  92 kB     00:00    
+---------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                        162 kB/s | 133 kB     00:00     
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                                                                                     1/1 
+  Installing       : pciutils-libs-3.7.0-5.el9.x86_64                                                                                    1/2 
+  Installing       : pciutils-3.7.0-5.el9.x86_64                                                                                         2/2 
+  Running scriptlet: pciutils-3.7.0-5.el9.x86_64                                                                                         2/2 
+  Verifying        : pciutils-libs-3.7.0-5.el9.x86_64                                                                                    1/2 
+  Verifying        : pciutils-3.7.0-5.el9.x86_64                                                                                         2/2 
+
+Installed:
+  pciutils-3.7.0-5.el9.x86_64                                        pciutils-libs-3.7.0-5.el9.x86_64                                       
+
+Complete!
+sh-5.1# yum -y install file
+Last metadata expiration check: 0:02:42 ago on Tue 24 Jan 2023 01:15:47 AM UTC.
+Dependencies resolved.
+=============================================================================================================================================
+ Package                           Architecture                   Version                               Repository                      Size
+=============================================================================================================================================
+Installing:
+ file                              x86_64                         5.39-10.el9                           baseos                          48 k
+Upgrading:
+ file-libs                         x86_64                         5.39-10.el9                           baseos                         587 k
+
+Transaction Summary
+=============================================================================================================================================
+Install  1 Package
+Upgrade  1 Package
+
+Total download size: 635 k
+Downloading Packages:
+(1/2): file-5.39-10.el9.x86_64.rpm                                                                            58 kB/s |  48 kB     00:00    
+(2/2): file-libs-5.39-10.el9.x86_64.rpm                                                                      528 kB/s | 587 kB     00:01    
+---------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                        451 kB/s | 635 kB     00:01     
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                                                                                     1/1 
+  Upgrading        : file-libs-5.39-10.el9.x86_64                                                                                        1/3 
+  Installing       : file-5.39-10.el9.x86_64                                                                                             2/3 
+  Cleanup          : file-libs-5.39-8.el9.x86_64                                                                                         3/3 
+  Running scriptlet: file-libs-5.39-8.el9.x86_64                                                                                         3/3 
+  Verifying        : file-5.39-10.el9.x86_64                                                                                             1/3 
+  Verifying        : file-libs-5.39-10.el9.x86_64                                                                                        2/3 
+  Verifying        : file-libs-5.39-8.el9.x86_64                                                                                         3/3 
+
+Upgraded:
+  file-libs-5.39-10.el9.x86_64                                                                                                               
+Installed:
+  file-5.39-10.el9.x86_64                                                                                                                    
+
+Complete!
+sh-5.1# 
+
+
